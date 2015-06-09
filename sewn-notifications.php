@@ -104,7 +104,7 @@ class Sewn_Notifications
 	{
 		$this->prefix      = 'sewn';
 		$this->plugin_name = strtolower(__CLASS__);
-		$this->version     = '1.1.0';
+		$this->version     = '1.1.1';
 		$this->settings    = array(
 			'dir'      => $this->get_dir_url( __FILE__ ),
 			'path'     => plugin_dir_path( __FILE__ ),
