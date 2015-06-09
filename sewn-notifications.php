@@ -357,22 +357,22 @@ class Sewn_Notifications
 	 * @param	$file A reference to the file
 	 * @return	string
 	 */
-    function get_dir_url( $file )
-    {
-        $dir   = str_replace( '\\' ,'/', trailingslashit(dirname($file)) );
-        $count = 0;
-        // if file is in plugins folder
-        $dir   = str_replace( str_replace('\\' ,'/', WP_PLUGIN_DIR), plugins_url(), $dir, $count );
+	function get_dir_url( $file )
+	{
+		$dir   = str_replace( '\\' ,'/', trailingslashit(dirname($file)) );
+		$count = 0;
+		// if file is in plugins folder
+		$dir   = str_replace( str_replace('\\' ,'/', WP_PLUGIN_DIR), plugins_url(), $dir, $count );
 		// if file is in wp-content folder
-        if ( $count < 1 ) {
-	        $dir  = str_replace( str_replace('\\' ,'/', WP_CONTENT_DIR), content_url(), $dir, $count );
-        }
+		if ( $count < 1 ) {
+			$dir  = str_replace( str_replace('\\' ,'/', WP_CONTENT_DIR), content_url(), $dir, $count );
+		}
 		// if file is in ??? folder
-        if ( $count < 1 ) {
-	        $dir  = str_replace( str_replace('\\' ,'/', ABSPATH), site_url('/'), $dir );
-        }
-        return $dir;
-    }
+		if ( $count < 1 ) {
+			$dir  = plugins_url( '/', $file );
+		}
+		return $dir;
+	}
 }
 
 $$class_name = new $class_name;
