@@ -9,7 +9,7 @@
  * Plugin Name:       Sewn In Notifications
  * Plugin URI:        https://wordpress.org/plugins/sewn-in-notifications/
  * Description:       Supports notifications on the front end based off of query variables. Notifications can also be added manually.
- * Version:           1.1.0
+ * Version:           1.1.1
  * Author:            Jupitercow
  * Author URI:        http://Jupitercow.com/
  * Contributor:       Jake Snyder
